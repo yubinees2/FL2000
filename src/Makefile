@@ -32,10 +32,8 @@ else
 
 obj-m := fl2000.o
 
-#KERNEL_PATH = ../../../kernel/linux-3.10.0-327.13.1.el7
-#KERNEL_PATH = /usr/src/kernels/3.10.0-327.13.1.el7.x86_64
-KERNEL_PATH = /usr/src/kernels/`uname -r`
-#KERNEL_PATH = /usr/src/linux-headers-`uname -r`
+#KERNEL_PATH = /usr/src/kernels/`uname -r`
+KERNEL_PATH = /usr/src/linux-headers-`uname -r`
 
 all:
 	make -C $(KERNEL_PATH) M=$(PWD) modules
